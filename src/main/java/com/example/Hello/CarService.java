@@ -2,7 +2,9 @@ package com.example.Hello;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CarService {
 
     private List<Car> cars = new ArrayList<>();

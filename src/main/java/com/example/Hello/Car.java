@@ -6,6 +6,8 @@ public class Car {
     private String brand;
     private double price;
 
+    public Car() {}
+
     public Car(String plateNumber, String brand, double price) {
         this.plateNumber = plateNumber;
         this.brand = brand;
