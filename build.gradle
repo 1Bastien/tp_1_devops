@@ -39,3 +39,8 @@ jacocoTestReport {
 	}
 }
 
+tasks.register('copyDependencies', Copy) {
+	from configurations.runtimeClasspath
+	into 'build/sonar-libs'
+}
+

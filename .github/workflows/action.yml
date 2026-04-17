@@ -32,7 +32,7 @@ jobs:
       - name: Run Tests and Generate Coverage
         run: |
           chmod +x gradlew
-          ./gradlew test jacocoTestReport
+          ./gradlew test jacocoTestReport copyDependencies
 
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
