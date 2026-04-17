@@ -39,3 +39,13 @@ jacocoTestReport {
 	}
 }
 
+tasks.register('exportClasspath') {
+	dependsOn configurations.runtimeClasspath
+	doLast {
+		def libs = configurations.runtimeClasspath.files
+			.collect { it.absolutePath }
+			.join(',')
+		file('build/sonar-libraries.txt').text = libs
+	}
+}
+
